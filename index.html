@@ -7,7 +7,8 @@
   <title>Ananda | Premium Incense</title>
 
   <link rel="stylesheet" href="styles/intro.css" />
-  <link rel="stylesheet" href="styles/ambient-flow.css" />
+  <link rel="stylesheet" href="styles/design.css" />
+
 </head>
 
 <body class="is-loading">
@@ -135,11 +136,6 @@
         </svg>
 
         <div class="floor-shine"></div>
-      </636,110.588669 z" />
-          </g>
-        </svg>
-
-        <div class="floor-shine"></div>
       </div>
 
       <div class="intro-copy">
@@ -150,47 +146,19 @@
     </div>
   </section>
 
+ <!-- background design-->
+ <div class="ambient-background" aria-hidden="true">
+   <canvas id="topographicCanvas"></canvas>
+ </div>
 
-  <!-- GLOBAL AMBIENT FLOW BACKGROUND -->
-  <div class="ambient-flow" aria-hidden="true">
-    <canvas id="ambientCanvas"></canvas>
-
-    <div class="ambient-orb orb-one"></div>
-    <div class="ambient-orb orb-two"></div>
-    <div class="ambient-orb orb-three"></div>
-
-    <div class="ambient-pattern"></div>
-  </div>
-
-
-  <!-- HEADER -->
-  <header class="site-header">
-    <a class="nav-brand" href="#" aria-label="Ananda Home">
-      <img src="assets/ananda-mark-only.svg" alt="Ananda" />
-    </a>
-
-    <nav>
-      <a href="#">Home</a>
-      <a href="#">Collections</a>
-      <a href="#">Manufacturing</a>
-      <a href="#">Contact</a>
-    </nav>
-  </header>
-
-
-  <!-- HOMEPAGE -->
-  <main class="site-main">
-  <section class="hero-canvas" id="home">
-    <!-- Blank canvas for upcoming hero design -->
-  </section>
-</main>
-
+  <main class="site-content">
+    <!-- Add your actual website sections here -->
+  </main>
   <!-- SCRIPTS -->
-  <script src="scripts/intro.js"></script>
-
   <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/lenis@latest/dist/lenis.min.js"></script>
+  <script src="scripts/intro.js"></script>
+  <script src="scripts/design.js"></script>
 
-  <script src="scripts/ambient-flow.js"></script>
 </body>
 </html>
