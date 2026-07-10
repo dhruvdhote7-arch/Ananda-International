@@ -1,1 +1,114 @@
-hi;
+.ambient-background {
+ position: fixed;
+ inset: 0;
+ z-index: 0;
+ overflow: hidden;
+ pointer-events: none;
+
+
+ background:
+   radial-gradient(
+     circle at 18% 18%,
+     rgba(255, 255, 255, 0.95),
+     transparent 34%
+   ),
+   radial-gradient(
+     circle at 82% 75%,
+     rgba(228, 218, 198, 0.3),
+     transparent 42%
+   ),
+   linear-gradient(
+     135deg,
+     #fbfaf6 0%,
+     #f3efe5 52%,
+     #f8f5ed 100%
+   );
+}
+
+
+#topographicCanvas {
+ display: block;
+ width: 100%;
+ height: 100%;
+ opacity: 1;
+}
+
+
+.hero {
+ position: relative;
+ z-index: 1;
+
+
+ min-height: 100vh;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+
+
+ padding: 60px 24px;
+}
+
+
+.hero-content {
+ width: min(100%, 1000px);
+ text-align: center;
+}
+
+
+.eyebrow {
+ margin-bottom: 22px;
+
+
+ font-size: 0.78rem;
+ font-weight: 700;
+ letter-spacing: 0.22em;
+
+
+ color: rgba(20, 20, 20, 0.6);
+}
+
+
+.hero h1 {
+ font-size: clamp(3.5rem, 9vw, 8.5rem);
+ line-height: 0.93;
+ letter-spacing: -0.065em;
+ font-weight: 600;
+}
+
+
+.hero-description {
+ max-width: 590px;
+ margin: 28px auto 0;
+
+
+ font-size: clamp(1rem, 1.8vw, 1.25rem);
+ line-height: 1.7;
+
+
+ color: rgba(20, 20, 20, 0.64);
+}
+
+
+@media (max-width: 700px) {
+ .hero {
+   padding: 40px 20px;
+ }
+
+
+ .hero h1 {
+   font-size: clamp(3rem, 15vw, 5.5rem);
+ }
+
+
+ .hero-description {
+   max-width: 420px;
+ }
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+ #topographicCanvas {
+   opacity: 0.75;
+ }
+}
+
