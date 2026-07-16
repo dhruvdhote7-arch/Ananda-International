@@ -1,0 +1,2857 @@
+/* =========================================================
+   ANANDA MECHANICAL PHOTO FAN
+   FULL CSS
+   7 PNG GEAR VERSION
+   ========================================================= */
+
+
+:root {
+  /* =====================================================
+     GLOBAL COLOURS
+     ===================================================== */
+
+  --bg: #f7f1ea;
+
+  --ink: #211a17;
+
+  --muted: #786e67;
+
+
+  /* =====================================================
+     PHOTO CARD SIZE
+     ===================================================== */
+
+  --card-w: 180px;
+
+  --card-h: 235px;
+
+  --card-radius: 16px;
+
+
+  /* =====================================================
+     PHOTO FAN POSITION
+     ===================================================== */
+
+  --fan-zone-top: 7%;
+
+  --fan-zone-height: 45%;
+
+
+  /* =====================================================
+     LOTUS POSITION CONTROLS
+     ===================================================== */
+
+  --lotus-right: 3%;
+
+  --lotus-top: 18%;
+
+  --lotus-width:
+    clamp(
+      300px,
+      26vw,
+      470px
+    );
+
+
+  /* =====================================================
+     MECHANISM POSITION
+     ===================================================== */
+
+  --mechanism-left: 3%;
+
+  --mechanism-right: 3%;
+
+  --mechanism-bottom: 3%;
+
+  --mechanism-height:
+    clamp(
+      190px,
+      23vh,
+      255px
+    );
+
+
+  /* =====================================================
+     7 GEAR MASTER POSITION CONTROLS
+
+     X:
+     larger = move right
+     smaller = move left
+
+     Y:
+     larger = move down
+     smaller = move up
+
+     SIZE:
+     change the visible gear size
+     ===================================================== */
+
+
+  /* ===============================================
+     GEAR A — gb1.png
+     =============================================== */
+
+  --gear-a-x: 8%;
+
+  --gear-a-y: 32px;
+
+  --gear-a-size: 215px;
+
+
+  /* ===============================================
+     GEAR B — gb2.png
+     =============================================== */
+
+  --gear-b-x: 13%;
+
+  --gear-b-y: -29px;
+
+  --gear-b-size: 150px;
+
+
+  /* ===============================================
+     GEAR C — gb3.png
+     =============================================== */
+
+  --gear-c-x: 15%;
+
+  --gear-c-y: -8px;
+
+  --gear-c-size: 185px;
+
+
+  /* ===============================================
+     GEAR D — gb4.png
+     =============================================== */
+
+  --gear-d-x: 19%;
+
+  --gear-d-y: -115px;
+
+  --gear-d-size: 350px;
+
+
+  /* ===============================================
+     GEAR E — gs5.png
+     =============================================== */
+
+  --gear-e-x: 32%;
+
+  --gear-e-y: 68px;
+
+  --gear-e-size: 165px;
+
+
+  /* ===============================================
+     GEAR F — gs6.png
+     =============================================== */
+
+  --gear-f-x: 35%;
+
+  --gear-f-y: -55px;
+
+  --gear-f-size: 105px;
+
+
+  /* ===============================================
+     GEAR G — gs7.png
+     =============================================== */
+
+  --gear-g-x: 30%;
+
+  --gear-g-y: 92px;
+
+  --gear-g-size: 110px;
+}
+
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+*,
+*::before,
+*::after {
+  box-sizing:
+    border-box;
+}
+
+
+html,
+body {
+  width:
+    100%;
+
+  min-height:
+    100%;
+
+  margin:
+    0;
+}
+
+
+html {
+  background:
+    var(--bg);
+}
+
+
+body {
+  overflow-x:
+    hidden;
+
+  color:
+    var(--ink);
+
+  background:
+    var(--bg);
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+  -webkit-font-smoothing:
+    antialiased;
+
+  text-rendering:
+    optimizeLegibility;
+}
+
+
+img {
+  display:
+    block;
+
+  max-width:
+    100%;
+
+  user-select:
+    none;
+
+  -webkit-user-drag:
+    none;
+}
+
+
+/* =========================================================
+   INTRO / OUTRO
+   ========================================================= */
+
+.intro,
+.outro {
+  min-height:
+    100svh;
+
+  display:
+    grid;
+
+  place-items:
+    center;
+
+  padding:
+    48px 24px;
+
+  text-align:
+    center;
+
+  background:
+    radial-gradient(
+      circle at 18% 18%,
+      rgba(
+        255,
+        255,
+        255,
+        0.96
+      ),
+      transparent 35%
+    ),
+
+    radial-gradient(
+      circle at 82% 74%,
+      rgba(
+        224,
+        205,
+        215,
+        0.32
+      ),
+      transparent 35%
+    ),
+
+    linear-gradient(
+      135deg,
+      #fbf7f2,
+      #eee5de
+    );
+}
+
+
+.intro-inner,
+.outro-inner {
+  max-width:
+    900px;
+}
+
+
+.eyebrow {
+  margin:
+    0 0 14px;
+
+  color:
+    var(--muted);
+
+  font-size:
+    11px;
+
+  font-weight:
+    500;
+
+  letter-spacing:
+    0.28em;
+
+  text-transform:
+    uppercase;
+}
+
+
+.intro h1,
+.outro h2,
+.heading h2 {
+  margin:
+    0;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-weight:
+    500;
+
+  line-height:
+    0.92;
+}
+
+
+.intro h1 {
+  font-size:
+    clamp(
+      62px,
+      9vw,
+      128px
+    );
+}
+
+
+.intro p:last-child {
+  margin-top:
+    22px;
+
+  color:
+    var(--muted);
+}
+
+
+.outro h2 {
+  font-size:
+    clamp(
+      52px,
+      7vw,
+      98px
+    );
+}
+
+
+/* =========================================================
+   PINNED FAN SECTION
+   ========================================================= */
+
+.fan-section {
+  position:
+    relative;
+
+  height:
+    450vh;
+}
+
+
+.fan-sticky {
+  position:
+    sticky;
+
+  top:
+    0;
+
+  height:
+    100svh;
+
+  overflow:
+    hidden;
+}
+
+
+.stage {
+  position:
+    relative;
+
+  width:
+    100%;
+
+  height:
+    100%;
+
+  overflow:
+    hidden;
+
+  isolation:
+    isolate;
+
+  perspective:
+    1200px;
+
+  background:
+    radial-gradient(
+      circle at 50% 26%,
+      rgba(
+        255,
+        255,
+        255,
+        0.98
+      ),
+      transparent 34%
+    ),
+
+    radial-gradient(
+      circle at 18% 42%,
+      rgba(
+        247,
+        218,
+        198,
+        0.34
+      ),
+      transparent 30%
+    ),
+
+    radial-gradient(
+      circle at 84% 50%,
+      rgba(
+        221,
+        210,
+        229,
+        0.32
+      ),
+      transparent 31%
+    ),
+
+    linear-gradient(
+      132deg,
+      #fbf7f3,
+      #f3ebe5 52%,
+      #eee6e1
+    );
+}
+
+
+.stage::after {
+  content:
+    "";
+
+  position:
+    absolute;
+
+  inset:
+    0;
+
+  z-index:
+    100;
+
+  pointer-events:
+    none;
+
+  opacity:
+    0.07;
+
+  mix-blend-mode:
+    multiply;
+
+  background-image:
+    url(
+      "data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.82' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.2'/%3E%3C/svg%3E"
+    );
+}
+
+
+/* =========================================================
+   HEADING
+   ========================================================= */
+
+.heading {
+  position:
+    absolute;
+
+  top:
+    clamp(
+      18px,
+      3.5vh,
+      44px
+    );
+
+  left:
+    50%;
+
+  z-index:
+    90;
+
+  width:
+    min(
+      860px,
+      calc(
+        100% - 30px
+      )
+    );
+
+  transform:
+    translateX(
+      -50%
+    );
+
+  text-align:
+    center;
+
+  pointer-events:
+    none;
+}
+
+
+.heading h2 {
+  font-size:
+    clamp(
+      50px,
+      6.2vw,
+      92px
+    );
+}
+
+
+.heading p:last-child {
+  margin:
+    8px 0 0;
+
+  color:
+    var(--muted);
+
+  font-size:
+    14px;
+}
+
+
+/* =========================================================
+   PHOTO FAN
+   ========================================================= */
+
+.fan-zone {
+  position:
+    absolute;
+
+  left:
+    0;
+
+  right:
+    0;
+
+  top:
+    var(
+      --fan-zone-top
+    );
+
+  height:
+    var(
+      --fan-zone-height
+    );
+
+  z-index:
+    32;
+
+  transform-style:
+    preserve-3d;
+
+  pointer-events:
+    none;
+}
+
+
+.fan-zone::before {
+  content:
+    "";
+
+  position:
+    absolute;
+
+  left:
+    50%;
+
+  bottom:
+    3%;
+
+  width:
+    min(
+      960px,
+      82vw
+    );
+
+  height:
+    150px;
+
+  transform:
+    translateX(
+      -50%
+    );
+
+  border-radius:
+    50%;
+
+  background:
+    radial-gradient(
+      ellipse at center,
+      rgba(
+        255,
+        255,
+        255,
+        0.66
+      ),
+      rgba(
+        222,
+        193,
+        165,
+        0.12
+      ) 48%,
+      transparent 72%
+    );
+
+  filter:
+    blur(
+      12px
+    );
+}
+
+
+.fan-root {
+  position:
+    absolute;
+
+  inset:
+    0;
+
+  transform-style:
+    preserve-3d;
+}
+
+
+.fan-card {
+  position:
+    absolute;
+
+  width:
+    var(
+      --card-w
+    );
+
+  height:
+    var(
+      --card-h
+    );
+
+  transform-style:
+    preserve-3d;
+
+  will-change:
+    transform,
+    filter;
+
+  pointer-events:
+    none;
+}
+
+
+.fan-card-inner {
+  position:
+    relative;
+
+  width:
+    100%;
+
+  height:
+    100%;
+
+  overflow:
+    hidden;
+
+  border-radius:
+    var(
+      --card-radius
+    );
+
+  background:
+    linear-gradient(
+      145deg,
+      #fffefb,
+      #f2e8dc
+    );
+
+  border:
+    1px solid
+    rgba(
+      131,
+      99,
+      67,
+      0.18
+    );
+
+  box-shadow:
+    0 16px 30px
+    rgba(
+      52,
+      35,
+      22,
+      0.15
+    ),
+
+    0 4px 10px
+    rgba(
+      52,
+      35,
+      22,
+      0.08
+    );
+
+  transform-style:
+    preserve-3d;
+}
+
+
+.fan-card-inner::after {
+  content:
+    "";
+
+  position:
+    absolute;
+
+  inset:
+    0;
+
+  z-index:
+    4;
+
+  pointer-events:
+    none;
+
+  border-radius:
+    inherit;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(
+        255,
+        255,
+        255,
+        0.30
+      ),
+      transparent 20%,
+      transparent 70%,
+      rgba(
+        255,
+        255,
+        255,
+        0.13
+      )
+    );
+}
+
+
+.fan-photo {
+  position:
+    absolute;
+
+  inset:
+    9px
+    9px
+    40px;
+
+  overflow:
+    hidden;
+
+  border-radius:
+    calc(
+      var(
+        --card-radius
+      ) -
+      7px
+    );
+
+  background:
+    #eee7df;
+}
+
+
+.fan-photo img {
+  width:
+    100%;
+
+  height:
+    100%;
+
+  object-fit:
+    cover;
+
+  filter:
+    saturate(
+      0.96
+    )
+    contrast(
+      0.99
+    );
+}
+
+
+.fan-caption {
+  position:
+    absolute;
+
+  left:
+    12px;
+
+  right:
+    12px;
+
+  bottom:
+    10px;
+
+  overflow:
+    hidden;
+
+  color:
+    #4f433c;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    17px;
+
+  font-style:
+    italic;
+
+  line-height:
+    1;
+
+  text-align:
+    center;
+
+  white-space:
+    nowrap;
+
+  text-overflow:
+    ellipsis;
+}
+
+
+.fan-rivet {
+  position:
+    absolute;
+
+  left:
+    12px;
+
+  bottom:
+    12px;
+
+  width:
+    18px;
+
+  height:
+    18px;
+
+  border-radius:
+    50%;
+
+  background:
+    radial-gradient(
+      circle at 35% 35%,
+      #fff,
+      #d6bea0 50%,
+      #8c6125 100%
+    );
+
+  box-shadow:
+    inset 0 1px 2px
+    rgba(
+      255,
+      255,
+      255,
+      0.6
+    ),
+
+    0 4px 8px
+    rgba(
+      76,
+      51,
+      29,
+      0.14
+    );
+}
+
+
+.fan-pin {
+  position:
+    absolute;
+
+  z-index:
+    60;
+
+  width:
+    52px;
+
+  height:
+    52px;
+
+  border-radius:
+    50%;
+
+  pointer-events:
+    none;
+
+  background:
+    radial-gradient(
+      circle at 34% 30%,
+      #fff 0 10%,
+      #eaded1 30%,
+      #bca892 62%,
+      #796654 100%
+    );
+
+  box-shadow:
+    0 12px 22px
+    rgba(
+      54,
+      35,
+      22,
+      0.19
+    ),
+
+    inset 0 2px 7px
+    rgba(
+      255,
+      255,
+      255,
+      0.88
+    );
+}
+
+
+.fan-pin span {
+  position:
+    absolute;
+
+  inset:
+    15px;
+
+  border-radius:
+    inherit;
+
+  background:
+    radial-gradient(
+      circle at 35% 30%,
+      #fff,
+      #b9a48f 54%,
+      #74604f 100%
+    );
+}
+
+
+/* =========================================================
+   RIGHT LOTUS + BACKFLOW SMOKE
+   ========================================================= */
+
+.fan-side-art {
+  position:
+    absolute;
+
+  right:
+    var(
+      --lotus-right
+    );
+
+  top:
+    var(
+      --lotus-top
+    );
+
+  width:
+    var(
+      --lotus-width
+    );
+
+  z-index:
+    28;
+
+  pointer-events:
+    none;
+
+  isolation:
+    isolate;
+}
+
+
+.fan-side-art-image {
+  position:
+    relative;
+
+  z-index:
+    2;
+
+  display:
+    block;
+
+  width:
+    100%;
+
+  height:
+    auto;
+
+  object-fit:
+    contain;
+
+  filter:
+    drop-shadow(
+      0
+      20px
+      34px
+      rgba(
+        94,
+        61,
+        40,
+        0.08
+      )
+    );
+}
+
+
+.backflow-smoke-canvas {
+  position:
+    absolute;
+
+  inset:
+    0;
+
+  z-index:
+    3;
+
+  width:
+    100%;
+
+  height:
+    100%;
+
+  pointer-events:
+    none;
+
+  mix-blend-mode:
+    normal;
+
+  opacity:
+    1;
+
+  filter:
+    blur(
+      0.12px
+    );
+}
+
+
+/* =========================================================
+   MECHANISM CONTAINER
+   ========================================================= */
+
+.mechanism {
+  position:
+    absolute;
+
+  left:
+    var(
+      --mechanism-left
+    );
+
+  right:
+    var(
+      --mechanism-right
+    );
+
+  bottom:
+    var(
+      --mechanism-bottom
+    );
+
+  height:
+    var(
+      --mechanism-height
+    );
+
+  z-index:
+    12;
+
+  overflow:
+    visible;
+
+  pointer-events:
+    none;
+}
+
+
+.mechanism::before {
+  content:
+    "";
+
+  position:
+    absolute;
+
+  left:
+    50%;
+
+  bottom:
+    -18px;
+
+  width:
+    94%;
+
+  height:
+    155px;
+
+  transform:
+    translateX(
+      -50%
+    );
+
+  border-radius:
+    50%;
+
+  background:
+    radial-gradient(
+      ellipse at center,
+      rgba(
+        212,
+        171,
+        107,
+        0.13
+      ),
+      rgba(
+        167,
+        143,
+        114,
+        0.05
+      ) 48%,
+      transparent 74%
+    );
+
+  filter:
+    blur(
+      14px
+    );
+}
+
+
+.mechanism::after {
+  content:
+    "";
+
+  position:
+    absolute;
+
+  left:
+    2%;
+
+  right:
+    8%;
+
+  bottom:
+    1%;
+
+  height:
+    72%;
+
+  z-index:
+    -1;
+
+  pointer-events:
+    none;
+
+  background:
+    radial-gradient(
+      ellipse at 31% 62%,
+      rgba(
+        209,
+        159,
+        79,
+        0.12
+      ),
+      transparent 35%
+    ),
+
+    radial-gradient(
+      ellipse at 57% 52%,
+      rgba(
+        196,
+        201,
+        207,
+        0.12
+      ),
+      transparent 32%
+    );
+
+  filter:
+    blur(
+      18px
+    );
+}
+
+
+/* =========================================================
+   BRIDGE / BLUEPRINT LINES
+   ========================================================= */
+
+.bridges,
+.blueprint {
+  position:
+    absolute;
+
+  inset:
+    0;
+
+  width:
+    100%;
+
+  height:
+    100%;
+
+  overflow:
+    visible;
+
+  pointer-events:
+    none;
+}
+
+
+.bridges {
+  z-index:
+    0;
+}
+
+
+.blueprint {
+  z-index:
+    1;
+
+  opacity:
+    0.20;
+}
+
+
+.bridges path {
+  fill:
+    none;
+
+  stroke:
+    rgba(
+      107,
+      87,
+      69,
+      0.14
+    );
+
+  stroke-width:
+    1.35;
+}
+
+
+.blueprint path,
+.blueprint circle {
+  fill:
+    none;
+
+  stroke:
+    rgba(
+      86,
+      74,
+      63,
+      0.18
+    );
+
+  stroke-width:
+    1;
+
+  stroke-dasharray:
+    2.5
+    3.5;
+}
+
+
+/* =========================================================
+   PNG GEAR BASE
+
+   IMPORTANT:
+   JavaScript rotates .gear-outer and
+   .gear-inner-rotor.
+
+   The wrapper itself controls position only.
+   ========================================================= */
+
+.mechanism .gear {
+  position:
+    absolute;
+
+  display:
+    block;
+
+  margin:
+    0;
+
+  padding:
+    0;
+
+  border:
+    0;
+
+  border-radius:
+    50%;
+
+  background:
+    transparent !important;
+
+  isolation:
+    isolate;
+
+  transform-origin:
+    50% 50%;
+
+  pointer-events:
+    none;
+
+  overflow:
+    visible;
+
+  will-change:
+    transform;
+
+  filter:
+    drop-shadow(
+      0 7px 9px
+      rgba(
+        67,
+        44,
+        20,
+        0.10
+      )
+    )
+
+    drop-shadow(
+      0 15px 24px
+      rgba(
+        67,
+        44,
+        20,
+        0.12
+      )
+    );
+}
+
+
+/*
+ * Remove any old CSS-generated gear
+ * teeth and gear body.
+ */
+
+.mechanism .gear::before,
+.mechanism .gear::after {
+  display:
+    none !important;
+
+  content:
+    none !important;
+}
+
+
+/* =========================================================
+   MAIN PNG LAYER
+   ========================================================= */
+
+.gear-outer {
+  position:
+    absolute;
+
+  inset:
+    0;
+
+  width:
+    100%;
+
+  height:
+    100%;
+
+  max-width:
+    none;
+
+  object-fit:
+    contain;
+
+  transform-origin:
+    50% 50%;
+
+  will-change:
+    transform;
+
+  backface-visibility:
+    hidden;
+
+  -webkit-backface-visibility:
+    hidden;
+}
+
+
+/* =========================================================
+   INNER CALIBRE WINDOW
+   ========================================================= */
+
+.gear-inner {
+  position:
+    absolute;
+
+  left:
+    50%;
+
+  top:
+    50%;
+
+  width:
+    var(
+      --inner-cut,
+      44%
+    );
+
+  height:
+    var(
+      --inner-cut,
+      44%
+    );
+
+  transform:
+    translate(
+      -50%,
+      -50%
+    );
+
+  border-radius:
+    50%;
+
+  overflow:
+    hidden;
+
+  z-index:
+    4;
+
+  pointer-events:
+    none;
+
+  -webkit-mask-image:
+    radial-gradient(
+      circle,
+      #000 0%,
+      #000 77%,
+      rgba(
+        0,
+        0,
+        0,
+        0.90
+      ) 87%,
+      transparent 100%
+    );
+
+  mask-image:
+    radial-gradient(
+      circle,
+      #000 0%,
+      #000 77%,
+      rgba(
+        0,
+        0,
+        0,
+        0.90
+      ) 87%,
+      transparent 100%
+    );
+}
+
+
+.gear-inner-rotor {
+  position:
+    absolute;
+
+  inset:
+    0;
+
+  display:
+    block;
+
+  border-radius:
+    50%;
+
+  transform-origin:
+    50% 50%;
+
+  will-change:
+    transform;
+}
+
+
+.gear-inner-rotor img {
+  position:
+    absolute;
+
+  left:
+    50%;
+
+  top:
+    50%;
+
+  width:
+    var(
+      --inner-zoom,
+      228%
+    );
+
+  height:
+    var(
+      --inner-zoom,
+      228%
+    );
+
+  max-width:
+    none;
+
+  object-fit:
+    contain;
+
+  transform:
+    translate(
+      -50%,
+      -50%
+    );
+
+  transform-origin:
+    50% 50%;
+
+  pointer-events:
+    none;
+}
+
+
+/* =========================================================
+   7 GEAR POSITIONING
+
+   DO NOT EDIT THESE POSITION RULES.
+   Edit only the variables at the top of the CSS.
+   ========================================================= */
+
+
+/* GEAR A */
+
+.gear-a {
+  width:
+    var(
+      --gear-a-size
+    );
+
+  height:
+    var(
+      --gear-a-size
+    );
+
+  left:
+    var(
+      --gear-a-x
+    );
+
+  top:
+    var(
+      --gear-a-y
+    );
+
+  z-index:
+    10;
+}
+
+
+/* GEAR B */
+
+.gear-b {
+  width:
+    var(
+      --gear-b-size
+    );
+
+  height:
+    var(
+      --gear-b-size
+    );
+
+  left:
+    var(
+      --gear-b-x
+    );
+
+  top:
+    var(
+      --gear-b-y
+    );
+
+  z-index:
+    9;
+}
+
+
+/* GEAR C */
+
+.gear-c {
+  width:
+    var(
+      --gear-c-size
+    );
+
+  height:
+    var(
+      --gear-c-size
+    );
+
+  left:
+    var(
+      --gear-c-x
+    );
+
+  top:
+    var(
+      --gear-c-y
+    );
+
+  z-index:
+    12;
+}
+
+
+/* GEAR D */
+
+.gear-d {
+  width:
+    var(
+      --gear-d-size
+    );
+
+  height:
+    var(
+      --gear-d-size
+    );
+
+  left:
+    var(
+      --gear-d-x
+    );
+
+  top:
+    var(
+      --gear-d-y
+    );
+
+  z-index:
+    9;
+}
+
+
+/* GEAR E */
+
+.gear-e {
+  width:
+    var(
+      --gear-e-size
+    );
+
+  height:
+    var(
+      --gear-e-size
+    );
+
+  left:
+    var(
+      --gear-e-x
+    );
+
+  top:
+    var(
+      --gear-e-y
+    );
+
+  z-index:
+    13;
+}
+
+
+/* GEAR F */
+
+.gear-f {
+  width:
+    var(
+      --gear-f-size
+    );
+
+  height:
+    var(
+      --gear-f-size
+    );
+
+  left:
+    var(
+      --gear-f-x
+    );
+
+  top:
+    var(
+      --gear-f-y
+    );
+
+  z-index:
+    14;
+}
+
+
+/* GEAR G */
+
+.gear-g {
+  width:
+    var(
+      --gear-g-size
+    );
+
+  height:
+    var(
+      --gear-g-size
+    );
+
+  left:
+    var(
+      --gear-g-x
+    );
+
+  top:
+    var(
+      --gear-g-y
+    );
+
+  z-index:
+    15;
+}
+
+
+/* =========================================================
+   JEWELS
+   ========================================================= */
+
+.jewel {
+  position:
+    absolute;
+
+  z-index:
+    30;
+
+  width:
+    12px;
+
+  height:
+    12px;
+
+  border-radius:
+    50%;
+
+  background:
+    radial-gradient(
+      circle at 34% 32%,
+      #ffe1e7,
+      #be5868 58%,
+      #681622 100%
+    );
+
+  box-shadow:
+    0 3px 6px
+    rgba(
+      97,
+      19,
+      31,
+      0.19
+    ),
+
+    inset 0 1px 2px
+    rgba(
+      255,
+      255,
+      255,
+      0.44
+    );
+}
+
+
+.jewel-a {
+  left:
+    18%;
+
+  bottom:
+    22%;
+}
+
+
+.jewel-b {
+  left:
+    38%;
+
+  bottom:
+    36%;
+}
+
+
+.jewel-c {
+  left:
+    56%;
+
+  bottom:
+    30%;
+}
+
+
+.jewel-d {
+  left:
+    67%;
+
+  bottom:
+    25%;
+}
+
+
+/* =========================================================
+   BALANCE WHEEL
+   ========================================================= */
+
+.balance {
+  position:
+    absolute;
+
+  right:
+    1%;
+
+  bottom:
+    0;
+
+  z-index:
+    25;
+
+  width:
+    122px;
+
+  height:
+    122px;
+
+  border-radius:
+    50%;
+
+  border:
+    5px solid
+    #c89535;
+
+  box-shadow:
+    0 10px 20px
+    rgba(
+      76,
+      50,
+      27,
+      0.14
+    ),
+
+    inset 0 0 0 3px
+    rgba(
+      243,
+      216,
+      157,
+      0.5
+    ),
+
+    inset 0 0 18px
+    rgba(
+      111,
+      77,
+      30,
+      0.08
+    );
+
+  will-change:
+    transform;
+}
+
+
+.balance::before,
+.balance::after {
+  content:
+    "";
+
+  position:
+    absolute;
+
+  left:
+    50%;
+
+  top:
+    50%;
+
+  width:
+    4px;
+
+  height:
+    86%;
+
+  border-radius:
+    999px;
+
+  background:
+    linear-gradient(
+      #f0d28a,
+      #95611d
+    );
+
+  transform-origin:
+    center;
+}
+
+
+.balance::before {
+  transform:
+    translate(
+      -50%,
+      -50%
+    )
+    rotate(
+      45deg
+    );
+}
+
+
+.balance::after {
+  transform:
+    translate(
+      -50%,
+      -50%
+    )
+    rotate(
+      -45deg
+    );
+}
+
+
+.balance i {
+  position:
+    absolute;
+
+  inset:
+    42%;
+
+  border-radius:
+    50%;
+
+  background:
+    radial-gradient(
+      circle at 35% 35%,
+      #fff,
+      #d7bb83 52%,
+      #8b5d1f 100%
+    );
+}
+
+
+/* =========================================================
+   LEVER
+   ========================================================= */
+
+.lever {
+  position:
+    absolute;
+
+  right:
+    9%;
+
+  top:
+    7%;
+
+  z-index:
+    26;
+
+  width:
+    158px;
+
+  height:
+    12px;
+
+  transform-origin:
+    14px 50%;
+
+  will-change:
+    transform;
+}
+
+
+.lever-arm {
+  position:
+    absolute;
+
+  inset:
+    2px 0;
+
+  border-radius:
+    999px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #ecd69f,
+      #a77325
+    );
+
+  box-shadow:
+    inset 0 1px 0
+    rgba(
+      255,
+      255,
+      255,
+      0.48
+    ),
+
+    0 4px 8px
+    rgba(
+      77,
+      50,
+      25,
+      0.13
+    );
+}
+
+
+.lever-jewel {
+  position:
+    absolute;
+
+  right:
+    -4px;
+
+  top:
+    50%;
+
+  width:
+    22px;
+
+  height:
+    22px;
+
+  transform:
+    translateY(
+      -50%
+    );
+
+  border-radius:
+    50%;
+
+  background:
+    radial-gradient(
+      circle at 35% 35%,
+      #ffd4dc,
+      #c4586b 60%,
+      #741826
+    );
+}
+
+
+/* =========================================================
+   MECHANISM LABEL
+   ========================================================= */
+
+.mechanism-label {
+  position:
+    absolute;
+
+  left:
+    50%;
+
+  bottom:
+    -4px;
+
+  z-index:
+    40;
+
+  transform:
+    translateX(
+      -50%
+    );
+
+  margin:
+    0;
+
+  color:
+    var(--muted);
+
+  font-size:
+    10px;
+
+  font-weight:
+    500;
+
+  letter-spacing:
+    0.25em;
+
+  white-space:
+    nowrap;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.footer {
+  position:
+    absolute;
+
+  left:
+    0;
+
+  right:
+    0;
+
+  bottom:
+    clamp(
+      16px,
+      3vh,
+      34px
+    );
+
+  z-index:
+    90;
+
+  display:
+    flex;
+
+  align-items:
+    flex-end;
+
+  justify-content:
+    space-between;
+
+  padding:
+    0
+    clamp(
+      20px,
+      4vw,
+      60px
+    );
+
+  pointer-events:
+    none;
+}
+
+
+.counter {
+  display:
+    flex;
+
+  align-items:
+    baseline;
+
+  gap:
+    10px;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+}
+
+
+.counter strong {
+  font-size:
+    clamp(
+      48px,
+      5.6vw,
+      78px
+    );
+
+  font-weight:
+    500;
+
+  line-height:
+    0.8;
+}
+
+
+.counter span {
+  color:
+    var(--muted);
+
+  font-size:
+    14px;
+}
+
+
+.scroll-cue {
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  gap:
+    14px;
+
+  color:
+    var(--muted);
+
+  font-size:
+    11px;
+
+  letter-spacing:
+    0.22em;
+}
+
+
+.scroll-cue i {
+  position:
+    relative;
+
+  width:
+    74px;
+
+  height:
+    1px;
+
+  overflow:
+    hidden;
+
+  background:
+    rgba(
+      33,
+      27,
+      24,
+      0.22
+    );
+}
+
+
+.scroll-cue i::after {
+  content:
+    "";
+
+  position:
+    absolute;
+
+  inset:
+    0;
+
+  background:
+    var(--ink);
+
+  animation:
+    cueMove
+    1.8s
+    ease-in-out
+    infinite;
+}
+
+
+@keyframes cueMove {
+  0% {
+    transform:
+      translateX(
+        -110%
+      );
+  }
+
+  55% {
+    transform:
+      translateX(
+        0
+      );
+  }
+
+  100% {
+    transform:
+      translateX(
+        110%
+      );
+  }
+}
+
+
+/* =========================================================
+   RESPONSIVE — LAPTOP
+   ========================================================= */
+
+@media (
+  max-width:
+  1199px
+) {
+  :root {
+    --card-w:
+      150px;
+
+    --card-h:
+      198px;
+
+
+    --fan-zone-top:
+      15%;
+
+    --fan-zone-height:
+      42%;
+
+
+    --lotus-right:
+      1%;
+
+    --lotus-top:
+      20%;
+
+    --lotus-width:
+      clamp(
+        250px,
+        28vw,
+        380px
+      );
+
+
+    --mechanism-left:
+      2%;
+
+    --mechanism-right:
+      2%;
+
+    --mechanism-height:
+      205px;
+
+
+    /* ===============================================
+       LAPTOP GEAR POSITIONS
+       =============================================== */
+
+    --gear-a-x:
+      2%;
+
+    --gear-a-y:
+      75px;
+
+    --gear-a-size:
+      125px;
+
+
+    --gear-b-x:
+      13%;
+
+    --gear-b-y:
+      15px;
+
+    --gear-b-size:
+      130px;
+
+
+    --gear-c-x:
+      25%;
+
+    --gear-c-y:
+      78px;
+
+    --gear-c-size:
+      142px;
+
+
+    --gear-d-x:
+      39%;
+
+    --gear-d-y:
+      15px;
+
+    --gear-d-size:
+      130px;
+
+
+    --gear-e-x:
+      52%;
+
+    --gear-e-y:
+      82px;
+
+    --gear-e-size:
+      110px;
+
+
+    --gear-f-x:
+      63%;
+
+    --gear-f-y:
+      35px;
+
+    --gear-f-size:
+      92px;
+
+
+    --gear-g-x:
+      72%;
+
+    --gear-g-y:
+      88px;
+
+    --gear-g-size:
+      95px;
+  }
+
+
+  .balance {
+    width:
+      100px;
+
+    height:
+      100px;
+  }
+
+
+  .lever {
+    width:
+      126px;
+  }
+}
+
+
+/* =========================================================
+   RESPONSIVE — TABLET
+   ========================================================= */
+
+@media (
+  max-width:
+  899px
+) {
+  :root {
+    --card-w:
+      132px;
+
+    --card-h:
+      176px;
+
+    --card-radius:
+      13px;
+
+
+    --fan-zone-top:
+      17%;
+
+    --fan-zone-height:
+      39%;
+
+
+    --lotus-right:
+      1%;
+
+    --lotus-top:
+      22%;
+
+    --lotus-width:
+      clamp(
+        220px,
+        30vw,
+        330px
+      );
+
+
+    --mechanism-left:
+      1%;
+
+    --mechanism-right:
+      1%;
+
+    --mechanism-height:
+      180px;
+
+
+    /* ===============================================
+       TABLET GEAR POSITIONS
+       =============================================== */
+
+    --gear-a-x:
+      1%;
+
+    --gear-a-y:
+      68px;
+
+    --gear-a-size:
+      100px;
+
+
+    --gear-b-x:
+      13%;
+
+    --gear-b-y:
+      20px;
+
+    --gear-b-size:
+      105px;
+
+
+    --gear-c-x:
+      27%;
+
+    --gear-c-y:
+      72px;
+
+    --gear-c-size:
+      115px;
+
+
+    --gear-d-x:
+      43%;
+
+    --gear-d-y:
+      20px;
+
+    --gear-d-size:
+      105px;
+
+
+    --gear-e-x:
+      58%;
+
+    --gear-e-y:
+      76px;
+
+    --gear-e-size:
+      90px;
+
+
+    --gear-f-x:
+      71%;
+
+    --gear-f-y:
+      35px;
+
+    --gear-f-size:
+      78px;
+
+
+    --gear-g-x:
+      81%;
+
+    --gear-g-y:
+      80px;
+
+    --gear-g-size:
+      82px;
+  }
+
+
+  .heading h2 {
+    font-size:
+      clamp(
+        46px,
+        10vw,
+        74px
+      );
+  }
+
+
+  .fan-photo {
+    inset:
+      7px
+      7px
+      33px;
+  }
+
+
+  .fan-caption {
+    bottom:
+      8px;
+
+    font-size:
+      14px;
+  }
+
+
+  .balance {
+    width:
+      84px;
+
+    height:
+      84px;
+
+    border-width:
+      4px;
+  }
+
+
+  .lever {
+    width:
+      103px;
+  }
+}
+
+
+/* =========================================================
+   RESPONSIVE — MOBILE
+   ========================================================= */
+
+@media (
+  max-width:
+  599px
+) {
+  :root {
+    --card-w:
+      104px;
+
+    --card-h:
+      142px;
+
+    --card-radius:
+      11px;
+
+
+    --fan-zone-top:
+      20%;
+
+    --fan-zone-height:
+      34%;
+
+
+    --lotus-right:
+      1%;
+
+    --lotus-top:
+      25%;
+
+    --lotus-width:
+      min(
+        45vw,
+        250px
+      );
+
+
+    --mechanism-left:
+      0%;
+
+    --mechanism-right:
+      0%;
+
+    --mechanism-bottom:
+      7%;
+
+    --mechanism-height:
+      145px;
+
+
+    /* ===============================================
+       MOBILE GEAR POSITIONS
+       =============================================== */
+
+    --gear-a-x:
+      -2%;
+
+    --gear-a-y:
+      56px;
+
+    --gear-a-size:
+      78px;
+
+
+    --gear-b-x:
+      11%;
+
+    --gear-b-y:
+      12px;
+
+    --gear-b-size:
+      82px;
+
+
+    --gear-c-x:
+      27%;
+
+    --gear-c-y:
+      57px;
+
+    --gear-c-size:
+      90px;
+
+
+    --gear-d-x:
+      46%;
+
+    --gear-d-y:
+      12px;
+
+    --gear-d-size:
+      82px;
+
+
+    --gear-e-x:
+      63%;
+
+    --gear-e-y:
+      58px;
+
+    --gear-e-size:
+      72px;
+
+
+    --gear-f-x:
+      76%;
+
+    --gear-f-y:
+      21px;
+
+    --gear-f-size:
+      62px;
+
+
+    --gear-g-x:
+      88%;
+
+    --gear-g-y:
+      62px;
+
+    --gear-g-size:
+      66px;
+  }
+
+
+  .fan-section {
+    height:
+      410vh;
+  }
+
+
+  .heading h2 {
+    font-size:
+      clamp(
+        42px,
+        12vw,
+        62px
+      );
+  }
+
+
+  .heading p:last-child {
+    font-size:
+      12px;
+  }
+
+
+  .fan-photo {
+    inset:
+      6px
+      6px
+      28px;
+  }
+
+
+  .fan-caption {
+    font-size:
+      11px;
+  }
+
+
+  .fan-pin {
+    width:
+      44px;
+
+    height:
+      44px;
+  }
+
+
+  .fan-pin span {
+    inset:
+      13px;
+  }
+
+
+  .balance {
+    width:
+      68px;
+
+    height:
+      68px;
+
+    border-width:
+      3px;
+  }
+
+
+  .lever {
+    width:
+      78px;
+  }
+
+
+  .lever-jewel {
+    width:
+      16px;
+
+    height:
+      16px;
+  }
+
+
+  .jewel {
+    width:
+      8px;
+
+    height:
+      8px;
+  }
+
+
+  .mechanism-label {
+    font-size:
+      6px;
+
+    letter-spacing:
+      0.14em;
+  }
+
+
+  .scroll-cue span {
+    display:
+      none;
+  }
+
+
+  .footer {
+    padding:
+      0 16px;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (
+  prefers-reduced-motion:
+  reduce
+) {
+  .scroll-cue i::after {
+    animation:
+      none;
+  }
+}
