@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="ANANDA International — premium scroll-driven photo fan with mechanical watch movement and backflow incense smoke."
+  >
+
+  <title>ANANDA Mechanical Photo Fan</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <main>
+
+    <!-- =====================================================
+         INTRO
+         ===================================================== -->
+    <section class="intro">
+      <div class="intro-inner">
+        <p class="eyebrow">ANANDA INTERNATIONAL</p>
+        <h1>Mechanical Memories</h1>
+        <p>Scroll down to unfold the photo fan and wind the calibre.</p>
+      </div>
+    </section>
+
+
+    <!-- =====================================================
+         FAN SECTION
+         ===================================================== -->
+    <section
+      class="fan-section"
+      id="memories"
+      data-fan-section
+    >
+      <div class="fan-sticky">
+        <div
+          class="stage"
+          data-stage
+        >
+
+          <!-- HEADING -->
+          <header class="heading">
+            <p class="eyebrow">OUR FAVOURITE MOMENTS</p>
+            <h2>Unfolding memories</h2>
+            <p>Each image opens clearly as the mechanism turns.</p>
+          </header>
+
+
+          <!-- PHOTO FAN -->
+          <div class="fan-zone">
+            <div
+              class="fan-root"
+              data-fan-root
+            ></div>
+
+            <div
+              class="fan-pin"
+              data-fan-pin
+              aria-hidden="true"
+            >
+              <span></span>
+            </div>
+          </div>
+
+
+          <!-- =================================================
+               RIGHT LOTUS + BACKFLOW SMOKE
+               ================================================= -->
+          <div
+            class="fan-side-art"
+            data-backflow-art
+            aria-hidden="true"
+          >
+            <img
+              src="assets/bglotus.png"
+              alt=""
+              class="fan-side-art-image"
+            >
+
+            <canvas
+              class="backflow-smoke-canvas"
+              data-backflow-smoke
+            ></canvas>
+          </div>
+
+
+          <!-- =================================================
+               PREMIUM PNG MECHANICAL MOVEMENT
+               ================================================= -->
+          <div
+            class="mechanism"
+            aria-hidden="true"
+          >
+
+            <!-- Decorative mechanical bridge lines -->
+            <svg
+              class="bridges"
+              viewBox="0 0 1200 260"
+              preserveAspectRatio="none"
+            >
+              <path d="M40 175 C170 120 320 120 455 160 S760 225 1150 145"></path>
+              <path d="M95 215 C260 160 390 160 520 195 S810 240 1090 190"></path>
+              <path d="M125 145 C275 95 430 110 555 152 S835 200 1070 130"></path>
+            </svg>
+
+            <!-- Fine blueprint details -->
+            <svg
+              class="blueprint"
+              viewBox="0 0 1200 260"
+              preserveAspectRatio="none"
+            >
+              <circle cx="205" cy="138" r="60"></circle>
+              <circle cx="205" cy="138" r="36"></circle>
+
+              <circle cx="400" cy="154" r="48"></circle>
+              <circle cx="400" cy="154" r="27"></circle>
+
+              <circle cx="602" cy="112" r="41"></circle>
+              <circle cx="602" cy="112" r="21"></circle>
+
+              <circle cx="785" cy="152" r="52"></circle>
+              <circle cx="785" cy="152" r="29"></circle>
+
+              <circle cx="1035" cy="150" r="72"></circle>
+              <circle cx="1035" cy="150" r="40"></circle>
+
+              <path d="M130 160 L275 120 L420 160 L565 116 L720 145 L900 170"></path>
+              <path d="M150 205 L320 168 L475 190 L650 158 L820 185 L1035 172"></path>
+            </svg>
+
+
+            <!-- =================================================
+                 GEAR 1 — LARGE GOLD
+                 ================================================= -->
+            <div
+              class="gear gear-a"
+              data-gear-a
+              style="
+                --asset-scale: 1;
+                --inner-cut: 42%;
+                --inner-zoom: 238%;
+              "
+            >
+              <img
+                class="gear-outer"
+                src="assets/gb1.png"
+                alt=""
+                draggable="false"
+              >
+
+              <span class="gear-inner">
+                <span class="gear-inner-rotor">
+                  <img
+                    src="assets/gb1.png"
+                    alt=""
+                    draggable="false"
+                  >
+                </span>
+              </span>
+            </div>
+
+
+            <!-- =================================================
+                 GEAR 2 — LARGE PLATINUM / SILVER
+                 ================================================= -->
+            <div
+              class="gear gear-b"
+              data-gear-b
+              style="
+                --asset-scale: 1;
+                --inner-cut: 43%;
+                --inner-zoom: 234%;
+              "
+            >
+              <img
+                class="gear-outer"
+                src="assets/gb2.png"
+                alt=""
+                draggable="false"
+              >
+
+              <span class="gear-inner">
+                <span class="gear-inner-rotor">
+                  <img
+                    src="assets/gb2.png"
+                    alt=""
+                    draggable="false"
+                  >
+                </span>
+              </span>
+            </div>
+
+
+            <!-- =================================================
+                 GEAR 3 — MAIN GOLD
+                 ================================================= -->
+            <div
+              class="gear gear-c"
+              data-gear-c
+              style="
+                --asset-scale: 1;
+                --inner-cut: 46%;
+                --inner-zoom: 218%;
+              "
+            >
+              <img
+                class="gear-outer"
+                src="assets/gb3.png"
+                alt=""
+                draggable="false"
+              >
+
+              <span class="gear-inner">
+                <span class="gear-inner-rotor">
+                  <img
+                    src="assets/gb3.png"
+                    alt=""
+                    draggable="false"
+                  >
+                </span>
+              </span>
+            </div>
+
+
+            <!-- =================================================
+                 GEAR 4 — LARGE SILVER
+                 ================================================= -->
+            <div
+              class="gear gear-d"
+              data-gear-d
+              style="
+                --asset-scale: 1;
+                --inner-cut: 43%;
+                --inner-zoom: 232%;
+              "
+            >
+              <img
+                class="gear-outer"
+                src="assets/gb4.png"
+                alt=""
+                draggable="false"
+              >
+
+              <span class="gear-inner">
+                <span class="gear-inner-rotor">
+                  <img
+                    src="assets/gb4.png"
+                    alt=""
+                    draggable="false"
+                  >
+                </span>
+              </span>
+            </div>
+
+
+            <!-- =================================================
+                 GEAR 5 — MEDIUM GOLD
+                 ================================================= -->
+            <div
+              class="gear gear-e"
+              data-gear-e
+              style="
+                --asset-scale: 1.25;
+                --inner-cut: 44%;
+                --inner-zoom: 300%;
+              "
+            >
+              <img
+                class="gear-outer"
+                src="assets/gs5.png"
+                alt=""
+                draggable="false"
+              >
+
+              <span class="gear-inner">
+                <span class="gear-inner-rotor">
+                  <img
+                    src="assets/gs5.png"
+                    alt=""
+                    draggable="false"
+                  >
+                </span>
+              </span>
+            </div>
+
+
+            <!-- =================================================
+                 GEAR 6 — SMALL SILVER
+                 ================================================= -->
+            <div
+              class="gear gear-f"
+              data-gear-f
+              style="
+                --asset-scale: 1.55;
+                --inner-cut: 45%;
+                --inner-zoom: 345%;
+              "
+            >
+              <img
+                class="gear-outer"
+                src="assets/gs6.png"
+                alt=""
+                draggable="false"
+              >
+
+              <span class="gear-inner">
+                <span class="gear-inner-rotor">
+                  <img
+                    src="assets/gs6.png"
+                    alt=""
+                    draggable="false"
+                  >
+                </span>
+              </span>
+            </div>
+
+
+            <!-- =================================================
+                 GEAR 7 — MEDIUM PLATINUM
+                 ================================================= -->
+            <div
+              class="gear gear-g"
+              data-gear-g
+              style="
+                --asset-scale: 1.85;
+                --inner-cut: 46%;
+                --inner-zoom: 390%;
+              "
+            >
+              <img
+                class="gear-outer"
+                src="assets/gs7.png"
+                alt=""
+                draggable="false"
+              >
+
+              <span class="gear-inner">
+                <span class="gear-inner-rotor">
+                  <img
+                    src="assets/gs7.png"
+                    alt=""
+                    draggable="false"
+                  >
+                </span>
+              </span>
+            </div>
+
+
+            
+
+            <!-- RUBY JEWELS -->
+            <div class="jewel jewel-a"></div>
+            <div class="jewel jewel-b"></div>
+            <div class="jewel jewel-c"></div>
+            <div class="jewel jewel-d"></div>
+
+
+            <!-- BALANCE WHEEL -->
+            <div
+              class="balance"
+              data-balance
+            >
+              <i></i>
+            </div>
+
+
+            <!-- LEVER -->
+            <div
+              class="lever"
+              data-lever
+            >
+              <span class="lever-arm"></span>
+              <span class="lever-jewel"></span>
+            </div>
+
+
+            <p class="mechanism-label">
+              SCROLL-DRIVEN MEMORY CALIBRE
+            </p>
+
+          </div>
+
+
+          <!-- FOOTER -->
+          <footer class="footer">
+
+            <div
+              class="counter"
+              aria-live="polite"
+            >
+              <strong data-counter-current>01</strong>
+              <span data-counter-total>/ 11</span>
+            </div>
+
+            <div
+              class="scroll-cue"
+              aria-hidden="true"
+            >
+              <span>SCROLL</span>
+              <i></i>
+            </div>
+
+          </footer>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =====================================================
+         OUTRO
+         ===================================================== -->
+    <section class="outro">
+      <div class="outro-inner">
+        <p class="eyebrow">ANANDA</p>
+        <h2>Every memory has its own movement.</h2>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- LIBRARIES -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.3.8/dist/lenis.min.js"></script>
+
+  <!-- PROJECT JS -->
+  <script src="script.js"></script>
+</body>
+</html>
